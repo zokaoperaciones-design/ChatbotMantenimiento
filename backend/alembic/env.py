@@ -11,8 +11,8 @@ from sqlalchemy import engine_from_config, pool
 from app.core.config import settings
 from app.core.database import Base
 
-# Importar aquí los modelos cuando existan (Sub-fase 1.5)
-# from app.models import *  # noqa: F401, F403
+# Importar todos los modelos para que Alembic los detecte
+from app.models import *  # noqa: F401, F403, E402
 
 config = context.config
 
